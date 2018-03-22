@@ -8,7 +8,7 @@ buildscript {
     ext.constraint_layout_version = '1.0.2'
     ext.dagger_version = '2.14.1'
     ext.architecture_components_version = '1.1.0'
-    ext.architecture_components_extension_version = '1.1.0'
+    ext.architecture_components_extension_version = '1.1.1'
     ext.architecture_components_core_testing_version = '1.0.0'
     ext.retrofit_version = '2.3.0'
     ext.picasso_version = '2.5.2'
@@ -21,11 +21,11 @@ buildscript {
     ext.test_espresso_core_version = '3.0.0'
     ext.test_mockito_version = '2.15.0'
 
-
     repositories {
         google()
         jcenter()
     }
+
     dependencies {
         classpath "com.android.tools.build:gradle:$gradle_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"

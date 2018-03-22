@@ -28,8 +28,7 @@ android {
 }
 
 dependencies {
-
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
 
     // Support Library
     implementation "com.android.support.constraint:constraint-layout:$constraint_layout_version"
@@ -41,8 +40,6 @@ dependencies {
     implementation "org.jetbrains.anko:anko:$anko_version"
 
     // Dagger
-    implementation "com.android.support.constraint:constraint-layout:$constraint_layout_version"
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
     kapt "com.google.dagger:dagger-android-processor:$dagger_version"
     implementation "com.google.dagger:dagger:$dagger_version"
@@ -89,4 +86,7 @@ dependencies {
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$test_espresso_core_version"
 
     application project(':app')
+    implementation project(':ui-components')
+    implementation project(':model')
+    implementation project(':arch')
 }

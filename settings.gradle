@@ -1,1 +1,1 @@
-include ':app', ':instantapp', ':app-main', ':ui-components'
+include ':app', ':instantapp', ':app-main', ':ui-components', ':data', ':arch', ':model'
