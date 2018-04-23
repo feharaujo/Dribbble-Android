@@ -1,4 +1,4 @@
-package com.felipearaujo.teamwork.base
+package com.fearaujo.arch
 
 import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.LifecycleObserver

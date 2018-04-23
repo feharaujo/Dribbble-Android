@@ -1,4 +1,4 @@
-package com.felipearaujo.teamwork.base
+package com.fearaujo.arch
 
 import android.arch.lifecycle.Lifecycle
 import android.os.Bundle
@@ -12,7 +12,7 @@ interface BaseContract {
 
     }
 
-    interface Presenter<V: BaseContract.View> {
+    interface Presenter<V: View> {
 
         var view: V?
 

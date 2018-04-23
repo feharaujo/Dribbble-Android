@@ -32,11 +32,17 @@ dependencies {
 
     // Support Library
     implementation "com.android.support.constraint:constraint-layout:$constraint_layout_version"
-    implementation "com.android.support:support-v4:$support_lib_version"
-    implementation "com.android.support:design:$support_lib_version"
+    implementation ("com.android.support:support-v4:$support_lib_version", {
+        exclude group: 'com.android.support', module: 'animated-vector'
+        exclude group: 'com.android.support', module: 'support-media-compat'
+    })
+    implementation ("com.android.support:design:$support_lib_version", {
+        exclude group: 'com.android.support', module: 'animated-vector'
+        exclude group: 'com.android.support', module: 'support-media-compat'
+    })
 
     // Kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "org.jetbrains.anko:anko:$anko_version"
 
     // Dagger
@@ -81,7 +87,7 @@ dependencies {
     })
     testImplementation "junit:junit:$test_junit_version"
     testImplementation "org.mockito:mockito-core:$test_mockito_version"
-    testImplementation 'org.powermock:powermock-api-easymock:1.7.4'
+    testImplementation "org.powermock:powermock-api-easymock:$test_power_mock_version"
     androidTestImplementation "com.android.support.test:runner:$test_runner_version"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$test_espresso_core_version"
 

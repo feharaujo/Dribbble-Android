@@ -29,7 +29,7 @@ class UIShot(context: Context, attrs: AttributeSet?) : CardView(context, attrs) 
         val picasso = Picasso.Builder(context)
                 .build()
 
-        picasso.load("https://cdn.dribbble.com/users/50942/screenshots/4360479/deck-dribbble_1x.png")
+        picasso.load("https://cdn.dribbble.com/users/50942/screenshots/4360479/deck-dribbble_teaser.png")
                 .into(iv_shot)
     }
 
